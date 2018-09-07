@@ -56,3 +56,9 @@ float dividir(float,float);
  *
  */
 float calcularFactorial(float);
+
+void cargarVector(int[], int);
+
+void mostrarVector(int[],int);
+
+inicializarVector(int[],int);

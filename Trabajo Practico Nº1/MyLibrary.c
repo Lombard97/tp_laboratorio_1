@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "myLibrary.h"
-
+//funciones basicas,factorial,cargar aleatoria de vectores.
 float getFloat(char texto[])
 {
     float operador;
@@ -76,3 +76,45 @@ float calcularFactorial(float operador1)
 
     return factorial;
 }
+
+void cargarVector(int vector[], int tam)
+{
+    char seguir;
+    int posicion;
+    do
+    {
+        printf("Ingrese posicion");
+        scanf("%d",&posicion);
+
+        printf("Ingrese un valor");
+        scanf("%d", &vector[posicion-1]);
+
+        printf("Desea continuar ingresando numeros?");
+        fflush(stdin);
+        scanf("%c",&seguir);
+
+    }while(seguir=='s');
+}
+
+void mostrarVector(int vector[],int tam)
+{
+    int i;
+    for(i=0;i<tam;i++)
+    {
+        if(vector[i]!=-1)
+        {
+            printf("%d\n",vector[i]);
+        }
+
+    }
+}
+
+inicializarVector(int vector[],int tam)
+{
+    int i;
+    for(i=0;i<5;i++)
+    {
+        vector[i]=-1;
+    }
+}
+
